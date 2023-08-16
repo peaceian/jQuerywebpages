@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueryMobile練習</title>
+    <link rel="stylesheet" href="../themes/themetest.min.css">
+    <link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+<body>
+    <div data-role="page" id="page1" data-theme="c">
+        <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back">
+            <a href="#page3">上一頁</a>
+            <h1>派大星 Patrick Star</h1><a href="#page2">下一頁</a>
+
+            <div data-role="navbar" data-position="fixed"><!--放在header裡可以實現固定在頂端的效果，在navbar中加上data-position="fixed"無效-->
+                <ul>
+                    <li><a href="#page1" data-icon="star">Patrick Star</a></li>
+                    <li><a href="#page2" data-icon="heart">SpongeBob</a></li>
+                    <li><a href="#page3" data-icon="user">Squidward</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content">
+            <img src="127435.jpg" style="width: 100%;">
+            <ul type="1" data-role="listview" data-inset="true" data-split-icon="star" data-split-theme="a">
+                <!--listview將ul、ol的選項轉為檢視清單；data-inset讓列表和區塊有距離-->
+                <li data-role="list-divider">劇中設定</li><!--list-divider可以變成小標題-->
+                <li>
+                    <a href="#">男主角之一。</a>
+                    <a href="#information1" data-rel="popup" data-position-to="window" data-transition="pop"
+                        class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-ajax="false" rel="external">star</a>
+                </li>
+                <li>原文名字為Patrick
+                    Star，通稱Patrick，華語地區正式譯名派大星是「Patrick」的音譯（派大）與「Star」的意譯（星）之合稱。另外，派大星在美國的全名在華語地區翻譯稱為派崔剋星星，而在美國派大星直接簡稱Patrick，在華語地區就直接簡稱派大星。則星則是指海星。
+                </li>
+                <li>粉紅色的海星，海綿寶寶最好的朋友，也是章魚哥討厭的對象之一，身上穿著一條紫色花朵的海灘短褲，在本劇裡總是跟海綿寶寶一起鬧出不少笑話。沒有工作，是蟹堡王的忠實老主顧，也喜歡吃海霸糊。有時候會去蟹堡王或海之霸工作，但是都只是去當一日員工，且大部分工作都會被搞砸，然而藝術天分超過章魚哥和海綿寶寶。
+                </li>
+                <li>一旦聽到鈴鐺或捏橡皮鴨的聲音就會暴走，在身上抹水母醬即可恢復理智。</li>
+                <li>傻氣、天真的性格卻經常說出有寓意的名言卻不自知，並且具有相當程度的寫實素描能力。</li>
+                <li>擁有再生能力，手斷了還可以長回來，但是斷肢還會再長回整個身體。</li>
+                <li>經常把事情弄巧成拙，腦空空聯誼社核心成員，大腦小到幾乎看不到。</li>
+                <li>平時只會待在家裡，坐在石頭上發懶，視發呆為榮耀，是比奇堡最會發呆的人。</li>
+                <li>興趣是發呆、睡大頭覺和大吃冰淇淋。</li>
+                <li>居住在比奇堡章魚哥家旁的一塊大型圓形石頭底下。外型為紅棕色半圓體石頭，但後來有說是一隻海龜的殼，跟海龜打了一架撞到石頭殼碎了，最後住進章魚哥家地下，內部有時候是凹洞並能放置家具（幾乎都是由沙子組成），有時候則是平面的。
+                </li>
+                <li>最喜歡吃冰淇淋（尤其是巧克力口味、草莓口味的）。</li>
+                <li>首度登場於試播集、第1集《急徵店員》。</li>
+                <li data-role="list-divider">個人資訊</li>
+                <li>生日是1985年2月26日（雙魚座）。</li>
+                <li>劇中14歲（1999年），現年38歲（2023年）。</li>
+            </ul>
+        </div>
+        <div data-role="popup" id="information1" data-theme="a" data-overlay-theme="b" class="ui-content"
+            style="max-width:340px; padding-bottom: 2em;">
+
+            <h3>網頁跳轉</h3>
+            <p>即將離開本頁面</p>
+            <a href="#" data-rel="back"
+                class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">確定</a>
+            <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini" data-ajax="false"
+                rel="external">取消</a>
+        </div>
+        <br>
+        <p><a class="ui-btn" href="#page2" data-transition="slide">海綿寶寶</a></p>
+        <p><a class="ui-btn" href="#page3" data-transition="flip">章魚哥</a></p>
+        <a href="#page4" data-transition="fade" data-role="button">其他角色</a>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>All rights reserved. </h4>
+    </div>
+
+    </div>
+    <div data-role="page" id="page2" data-theme="b">
+        <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back">
+            <a href="#page1">上一頁</a>
+            <h1>海綿寶寶 SpongeBob SquarePants</h1><a href="#page3">下一頁</a>
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#page1" data-icon="star">Patrick Star</a></li>
+                    <li><a href="#page2" data-icon="heart">SpongeBob</a></li>
+                    <li><a href="#page3" data-icon="user">Squidward</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content">
+            <img src="spongebob.png" style="width: 100%;">
+            <div data-role="collapsible-set"><!--群組摺疊要多這個屬性-->
+                <div data-role="collapsible" data-inset="true" data-collapsed-icon="carat-r"
+                    data-expanded-icon="carat-l">
+                    <h3>劇中設定</h3>
+                    <h3>男主角之一。<a
+                            href="https://zh.wikipedia.org/zh-tw/%E6%B5%B7%E7%BB%B5%E5%AE%9D%E5%AE%9D%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8#%E6%B5%B7%E7%B6%BF%E5%AF%B6%E5%AF%B6"
+                            target="_blank" style="text-decoration: none;color: yellow;">wiki</a></h3>
+                    <h3>原文名字為SpongeBob
+                        SquarePants，華語地區正式譯名海綿寶寶是「Sponge」的意譯（海綿）與「Bob」的音譯（寶寶）之合稱。另外，其電影版《海神王皇冠》在電視動畫未經東森幼幼台播映之前，HBO已先行引進，亦有推出DVD，時譯為棉球方塊[1]。海綿寶寶的全名為海綿寶寶
+                        方褲褲。</li>
+                        <h3>海綿寶寶也是《海綿寶寶》的同名角色及全系列主角的其中之一，特徵為黃色的方形海綿，
+                            以棕色短褲、白色襯衫、紅色領帶和黑色皮鞋為主要服裝。居住在作品虛設城市「比奇堡」郊區的鳳梨屋，並擔任當地著名快餐店蟹堡王餐廳的主廚，是蟹老闆的最佳員工。有隻寵物蝸牛小蝸，而最好的朋友是派大星。
+                        </h3>
+                        <h3>海綿寶寶為人樂觀開朗，卻相當神經質，時常惹出麻煩，而其刺耳的笑聲讓章魚哥所討厭。但若果他的牙齒的縫隙黏著時會有優越的聲音。</h3>
+                        <h3>看似心智不全，實際上很聰明，在絕境中只有他能想出辦法。</h3>
+                        <h3>極端完美主義者，對無關緊要的小問題也會無限挑刺。擔任蟹堡王老闆時比蟹老闆還過分，導致派大星和章魚哥雙雙離職。此外在上菜後若看到一點瑕疵就會把食物搶走，哪怕吃下去了也會強迫對方吐出來。
+                        </h3>
+                        <h3>具備自主創新能力，曾製作出好好吃魚堡、美麗蟹堡和美味熱狗，這些食物絕對碾壓美味蟹堡。若自己開店生意會比蟹堡王和海之霸加起來還要好。</h3>
+                        <h3>具有再生能力，也擁有伸縮能力，即使身體被四分五裂皆可恢復原狀。</h3>
+                        <h3>以廚師為職業，並視自己目前的工作為榮耀（每月最佳員工都是他），對招牌料理美味蟹堡有崇敬之意。對蟹老闆有著不合常理的愚忠，常承擔不合理的大量工作和小到可以忽略不計的工資（甚至有一集被要求倒貼）卻不以為然（因為他認為在蟹堡王工作是樂趣）。
+                        </h3>
+                        <h3>興趣是抓水母、吹泡泡和練習空手道。</h3>
+                        <h3>雖在泡芙阿姨的海底駕訓班接受長時間課程，卻因為路考總是莫名緊張（但帶上眼罩就不會感到緊張）。在考了若干次後還是未能考取駕照，而被泡芙阿姨討厭。</h3>
+                        <h3>很多時因為在多的壞的場面下哭泣不停，尤其是他的鍋鏟被折斷的時候。</h3>
+                        <h3>崇拜海超人、大洋遊俠和蝦霸，和皮老闆則時敵時友。</h3>
+                        <h3>力量平常極度微弱，連樹枝都舉不起來，卻可以使用鍋鏟。有時力量超乎常人，能夠單手投擲滅火器，甚至還曾單手摔過珊迪，但力氣太大就無法在蟹堡王工作。</h3>
+                        <h3>曾經和珊迪《蟹堡王週年慶》假裝結婚過。</h3>
+                        <h3>首度登場於試播集《急徵店員》。</h3>
+                </div>
+                <div data-role="collapsible" data-inset="true" data-collapsed-icon="arrow-r"
+                    data-expanded-icon="arrow-l">
+                    <h3>個人資訊</h3>
+                    <h3>生日是1986年7月14日（巨蟹座）。</h3>
+                    <h3>劇中13歲（1999年），現年37歲（2023年）</h3>
+                </div>
+            </div>
+            <br>
+            <p><a class="ui-btn" href="#page3" data-transition="slidedown">章魚哥</a></p><!--用button套a href 字體會有超連結-->
+            <p><a class="ui-btn" href="#page1" data-transition="flow">派大星</a></p><!--a href 直接套按鈕類別字體不會有超連結-->
+            <a href="#page4" data-transition="slide" data-role="button">其他角色</a>
+
+        </div>
+        <div data-role="footer">
+
+            <h4>All rights reserved</h4>
+
+
+        </div>
+    </div>
+    <div data-role="page" id="page3" data-theme="d">
+        <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back">
+            <a href="#page2">上一頁</a>
+            <h1>章魚哥 Squidward Tentacles</h1><a href="#page1">下一頁</a>
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#page1" data-icon="star">Patrick Star</a></li>
+                    <li><a href="#page2" data-icon="heart">SpongeBob</a></li>
+                    <li><a href="#page3" data-icon="user">Squidward</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content">
+            <img src="Squidward.jpg" style="width: 100%;">
+            <ol type="1" data-role="listview" data-inset="true" data-split-icon="user" data-split-theme="c">
+                <li data-role="list-divider">劇中設定</li>
+                <li><a href="#">男主角之一。</a><a
+                        href="https://zh.wikipedia.org/wiki/%E6%B5%B7%E7%BB%B5%E5%AE%9D%E5%AE%9D%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8#%E7%AB%A0%E9%AD%9A%E5%93%A5"
+                        target="_blank"></a></li>
+                <li>原文名字為Squidward J. Q. Tentacles，通稱Squidward Tentacles。</li>
+                <li>屬於藍圈章魚屬物種的大鼻子章魚。本名丹尼爾。容易憤怒且勢利眼。相當自戀，自以為擁有藝術才能。目前是光頭，但曾有過黃色長捲髮，在少數集數有希望頭髮再長回來的想法。</li>
+                <li>居住在比奇堡一棟仿復活節島人像的房屋中，兩旁即為海綿寶寶和派大星的家。</li>
+                <li>擔任蟹堡王餐廳的收銀員，但非常討厭自己的工作。實而望能成為舉世聞名的藝術家。喜歡吹奏豎笛（不過會令人以為家裡有垂死的動物在掙扎）及採用多種風格畫自畫像，但因畫風太過抽象而未能被大眾接受。</li>
+                <li>很會做菜。（但為了劇情需要，所以也曾做蟹堡做到失火）。</li>
+                <li>非常討厭海綿寶寶和派大星，尤其是海綿寶寶，且往往對他們冷淡以對，有時亦會破口大罵。但如果沒有海綿寶寶和派大星，他的生活會變得空虛乏味。</li>
+                <li>曾兩次對海綿寶寶展開報復，一次是愚人節搞惡作劇，另一次是和顧客談論海綿寶寶的日記，結果雖然很解氣，卻遭到了眾人譴責，甚至落得傾家蕩產。</li>
+                <li>也嘗試以不同方法使海綿寶寶搬出家及辭去收銀員工作，但輒失敗。</li>
+                <li>首度登場於試播集、第1集《急徵店員》。</li>
+                <li data-role="list-divider">個人資訊</li>
+                <li>生日是1975年10月9日（天秤座）。</li>
+                <li>劇中24歲（1999年），現年47歲（2022年）</li>
+
+            </ol>
+            <br>
+            <a href="#page1" data-transition="pop"
+                data-role="button">派大星</a><!--a 套button會有按鈕圖示，有class="ui-btn"則不會有按鈕樣子-->
+            <a href="#page2" data-transition="turn" data-role="button">海綿寶寶</a>
+            <a href="#page4" data-transition="fade" data-role="button">其他角色</a>
+
+        </div>
+        <div data-role="footer">
+
+            <h4>All rights reserved </h4>
+
+        </div>
+    </div>
+    <div data-role="page" id="page4" data-theme="c">
+        <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back">
+            <a href="#page3">上一頁</a>
+            <h1>其他角色</h1><a href="#page1">下一頁</a>
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#page1" data-icon="star">Patrick Star</a></li>
+                    <li><a href="#page2" data-icon="heart">SpongeBob</a></li>
+                    <li><a href="#page3" data-icon="user">Squidward</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content">
+            <div class="ui-grid-solo">
+                <div class="ui-block-a">
+                    <a href="https://zh.wikipedia.org/zh-hant/%E6%B5%B7%E7%BB%B5%E5%AE%9D%E5%AE%9D%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8#%E2%80%9C%E8%9F%B9%E8%80%81%E9%97%86%E2%80%9D%E8%9F%B9%E9%98%BF%E9%87%91"
+                        style="cursor:pointer" target="_blank"><img src="crab.jpg" alt="Krab" width="100%"></a>
+                </div>
+            </div>
+            <div class="ui-grid-b ui-responsive">
+                <div class="ui-block-a">
+                    <a href="https://zh.wikipedia.org/zh-hant/%E6%B5%B7%E7%BB%B5%E5%AE%9D%E5%AE%9D%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8#%E7%9A%AE%E8%80%81%E9%97%86"
+                        style="cursor: pointer;" target="_blank"><img src="Sheldon James Plankton.jpg" alt="Plankton"
+                            width="100%"></a>
+                </div>
+                <div class="ui-block-b">
+                    <img src="spongefamily.jpg" width="100%">
+                </div>
+                <div class="ui-block-c">
+                    <img src="fishman.jpg" width="100%">
+                </div>
+            </div>
+            <div class="ui-grid-a ui-responsive">
+                <div class="ui-block-a">
+                    <img src="pineapplehouse.jpg" width="100%">
+                </div>
+                <div class="ui-block-b">
+                    <a href="https://zh.wikipedia.org/zh-hant/%E6%B5%B7%E7%BB%B5%E5%AE%9D%E5%AE%9D%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8#%E7%8F%8A%E8%BF%AA%C2%B7%E5%A5%87%E5%8F%AF"
+                        style="cursor: pointer;" target="_blank"><img src="spongebob.jpg" width="100%" alt="Other"></a>
+                </div>
+            </div>
+
+            <a href="#page1" data-transition="pop"
+                data-role="button">派大星</a><!--a 套button會有按鈕圖示，有class="ui-btn"則不會有按鈕樣子-->
+            <a href="#page2" data-transition="turn" data-role="button">海綿寶寶</a>
+            <a href="#page3" data-transition="slidedown" data-role="button">章魚哥</a>
+
+        </div>
+        <div data-role="footer">
+
+            <h4>All rights reserved </h4>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
