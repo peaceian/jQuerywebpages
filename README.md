@@ -2,6 +2,7 @@
 This project is using the jQuery Mobile to create  webpages. <br>
 jQuery Mobile UI elements:<br>
 jQuery Mobile themes application<br>
+There are included but not limited:<br>
 data-role=" ":page,header,main,footer,narvar,popup,panel,button,controlgroup,listview,collapsible,collapsible-set,tabs,slider<br>
 data-position=" ":fixed,inline<br>
 data-theme=" ":a(ligtht),b(dark),c(line)<br>
